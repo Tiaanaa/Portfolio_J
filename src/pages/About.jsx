@@ -4,25 +4,28 @@ import Footer from '../components/Footer';
 import Card from "../components/Card";
 import CardContent from "../components/Cardcontent";
 import { Link } from 'react-router';
+import { FaStar } from "react-icons/fa";
+import { TbMessageCircleFilled } from "react-icons/tb";
 
 import { FiGithub, FiLinkedin, FiMail, FiPhone, FiCheck } from 'react-icons/fi';
 const About = () => {
   return (
     <>
     <section className="bg-slate-900 bg-cover w-full min-h-screen flex flex-col ">
-      <Nav/>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-400/60 flex-grow  p-4 md:p-8 md:m-0 lg:p-12 lg:pt-20 container mx-auto items-center text-sm border-2 w-full">
+        <Nav />
+        <div className='h-19 border-b-1 border-b-teal-200/10'></div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-gray-400/60 flex-grow container mx-auto items-center text-sm w-full h-full ">
           {/* Left panel */}
           <div></div>
           {/*Middle panel*/}
-        <div className=' md:-ml-60'>
+        <div className=' border-teal-200/20 border border-t-0 border-b-0 h-full p-3'>
           <h1><span className='  pr-7'>1</span>/** <br/><span className='  pr-7'>2</span> * About Omonola Christiana */</h1>
           <p className="text-teal-800"><span className='  pr-7 text-gray-400/60 '>3</span> <span className='text-sm font-thin text-gray-400/60'>*</span> Welcome to my portfolio.</p>
           <p><span className='  pr-7 text-gray-400/60 '>4</span> <span className='text-sm font-thin text-gray-400/60'>*</span></p>
             <p><span className='  pr-7 text-gray-400/60 '>5</span> <span className='text-sm font-thin text-gray-400/60'>*</span> <span className="text-red-300/70 "> [Diploma]</span> Professional Diploma in Education”.</p>
             <p><span className='  pr-7 text-gray-400/60 '>6</span> <span className='text-sm font-thin text-gray-400/60'>*</span><span className="text-red-300/70 "> [Bachelor's degree]</span> Computer Engineering</p>
-            <p><span className='  pr-7 text-gray-400/60 '>7</span> <span className='text-sm font-thin text-gray-400/60'>*</span><span className="text-red-300/70 "> [Programming]</span>Since June 2024, I have been a student in the Frontend Stack course.</p>
-            <p> <span className='  pr-7 text-gray-400/60 '>8</span> <span className='text-sm font-thin text-gray-400/60'>* </span>The languages I have learned include: HTML, CSS, JAVASCRIPT, REACT (jsx) <br/> <span className='  pr-7 text-gray-400/60 '>9</span>  with basic knowledge of Tailwindcss and Vite.js.</p>
+            <p><span className='  pr-7 text-gray-400/60 '>7</span> <span className='text-sm font-thin text-gray-400/60'>*</span><span className="text-red-300/70 "> [Programming]</span>Since June 2024, I have been a student in the <br/> <span className='  pr-7 text-gray-400/60 '>8</span> <span className='text-sm font-thin text-gray-400/60'>*</span> Frontend Stack course.</p>
+            <p> <span className='  pr-7 text-gray-400/60 '>9</span> <span className='text-sm font-thin text-gray-400/60'>* </span>The languages I have learned include: HTML, CSS, JAVASCRIPT, <br/><span className='  pr-7 text-gray-400/60 '>10</span> <span className='text-sm font-thin text-gray-400/60'>*</span>                REACT (jsx) with basic knowledge of Tailwindcss and Vite.js.</p>
             <p><span className='  pr-7 text-gray-400/60 '>10</span> <span className='text-sm font-thin text-gray-400/60'>*</span><span className="text-purple-400">[Whoistiana]</span> I am a very <strong>curious</strong> person, I <strong>enjoy working in a team</strong>, <br/><span className='  pr-7 text-gray-400/60 '>11</span> <span className='text-sm font-thin text-gray-400/60'>*</span>and when faced with a challenge, I always try to find the <strong>most optimal solution</strong>.</p>
             <p><span className='  pr-7 text-gray-400/60 '>12</span> <span className='text-sm font-thin text-gray-400/60'>*</span>Once I complete the course, I would like to deepen my knowledge <br /> <span className='  pr-7 text-gray-400/60 '>13</span> <span className='text-sm font-thin text-gray-400/60'>*</span> of the stack I have studied, especially <strong>React</strong>, <br/> <span className='  pr-7 text-gray-400/60 '>14</span> <span className='text-sm font-thin text-gray-400/60'>*</span> considering its growing use in web development.</p>
             <p><span className='  pr-7 text-gray-400/60 '>15</span> <span className='text-sm font-thin text-gray-400/60'>*</span></p>
@@ -41,11 +44,17 @@ const About = () => {
         </div>
 
         {/* Right panel */}
-        <div className="space-y-8">
-          <Card className="bg-slate-950 border-teal-200/20 border">
-            <CardContent className="p-4">
-              <h2 className="text-lg text-cyan-400 mb-2">Programming Languages</h2>
-              <div className="grid grid-cols-3 gap-2">
+        <div className="border-teal-200/20 border border-t-0 border-b-0  h-full p-6 ">
+            <Card className="">
+              <p className="text-gray-400/30 text-lg mb-5">// Programming Languages I have learned or am learning</p>
+              <div className='flex items-center justify-between gap-2 mb-4 mt-4'>
+                <span className='flex'> <img src="/src/assets/IMG_20210214_130932_054.jpg" alt="Me" className="rounded-full w-10 mr-2" />
+                <p><span className="text-purple-400">@Whoistiana</span> <br/><span className='text-sm font-thin text-gray-400/60'>Created 5 months ago</span></p></span>
+                <p className='flex items-center gap-2'><span className='flex items-center gap-1'> <TbMessageCircleFilled />details</span> <span className='flex items-center gap-1'> <FaStar size={16} className="text-gray/400/30"/> 3 stars</span></p>
+              </div>
+            <CardContent className="p-4 bg-slate-950 border-teal-200/20 border rounded-lg">
+              <h2 className="text-lg text-cyan-400 mb-2"></h2>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                 {["HTML", "CSS", "Javascript", "React", "Tailwindcss", "Git", "Bootstrap"].map(skill => (
                   <div key={skill} className="flex items-center gap-2">
                     <FiCheck size={16} className="text-green-400" /> {skill}
@@ -55,10 +64,16 @@ const About = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-950 border-teal-200/20 border">
-            <CardContent className="p-4">
-              <h2 className="text-lg text-cyan-400 mb-2">Operating Systems & Other Programs</h2>
-              <div className="grid grid-cols-3 gap-2">
+            <Card className="">
+              <p className="text-gray-400/30 text-lg mb-5">// Operating Systems & Other Programs</p>
+              <div className='flex items-center justify-between gap-2 mb-4 mt-4'>
+                <span className='flex'> <img src="/src/assets/IMG_20210214_130932_054.jpg" alt="Me" className="rounded-full w-10 mr-2" />
+                <p><span className="text-purple-400">@Whoistiana</span> <br/><span className='text-sm font-thin text-gray-400/60'>Created 5 months ago</span></p></span>
+                <p className='flex items-center gap-2'><span className='flex items-center gap-1'> <TbMessageCircleFilled />details</span> <span className='flex items-center gap-1'> <FaStar size={16} className="text-gray/400/30"/> 3 stars</span></p>
+              </div>
+              <CardContent className="p-4 bg-slate-950 border-teal-200/20 border rounded-lg">
+                
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                 {["Windows", "Mac OS", "Linux", "Adobe Suite", "Figma"].map(app => (
                   <div key={app} className="flex items-center gap-2">
                     <FiCheck size={16} className="text-green-400" /> {app}
