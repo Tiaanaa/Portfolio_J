@@ -4,20 +4,22 @@ import Footer from '../components/Footer';
 import Card from "../components/Card";
 import CardContent from "../components/Cardcontent";
 import { Link } from 'react-router';
-import { FaStar } from "react-icons/fa";
-import { TbMessageCircleFilled } from "react-icons/tb";
+import Sidebar from '../components/Sidebar';
+import Rating from '../components/Rating';
 
 import { FiGithub, FiLinkedin, FiMail, FiPhone, FiCheck } from 'react-icons/fi';
 const About = () => {
   return (
     <>
-    <section className="bg-slate-900 bg-cover w-full min-h-screen flex flex-col ">
+    <section className="bg-slate-900 bg-cover w-full min-h-screen ">
         <Nav />
-        <div className='h-19 border-b-1 border-b-teal-200/10'></div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-gray-400/60 flex-grow container mx-auto items-center text-sm w-full h-full ">
+        <div className='h-19 border-b-1 border-b-teal-200/10 flex flex-col md:flex'></div>
+        <div className='min-h-screen md:flex'>
+          <Sidebar />
           {/* Left panel */}
-          <div></div>
+          
           {/*Middle panel*/}
+          <main className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-gray-400/60 flex-grow container mx-auto items-center text-sm w-full h-full ">
         <div className=' border-teal-200/20 border border-t-0 border-b-0 h-full p-3'>
           <h1><span className='  pr-7'>1</span>/** <br/><span className='  pr-7'>2</span> * About Omonola Christiana */</h1>
           <p className="text-teal-800"><span className='  pr-7 text-gray-400/60 '>3</span> <span className='text-sm font-thin text-gray-400/60'>*</span> Welcome to my portfolio.</p>
@@ -38,20 +40,18 @@ const About = () => {
             <p className="flex items-center gap-2"><FiMail size={16}/> christianaomonola99@gmail.com</p>
             <p className="flex items-center gap-2"><FiPhone size={16}/> +234 816 490 5260</p>
             <div className="flex gap-4 mt-2"> <Link to='https://www.linkedin.com/in/omonolachristiana'  target='_blank'><FiLinkedin size={16} /></Link>
-     <Link to='https://github.com/Tiaanaa' target='_blank'><FiGithub size={16} /></Link>
-            </div>
-          </div>
+              <Link to='https://github.com/Tiaanaa' target='_blank'><FiGithub size={16} /></Link>
+                </div>
+                
+              </div>
+              
         </div>
 
         {/* Right panel */}
         <div className="border-teal-200/20 border border-t-0 border-b-0  h-full p-6 ">
             <Card className="">
               <p className="text-gray-400/30 text-lg mb-5">// Programming Languages I have learned or am learning</p>
-              <div className='flex items-center justify-between gap-2 mb-4 mt-4'>
-                <span className='flex'> <img src="/src/assets/IMG_20210214_130932_054.jpg" alt="Me" className="rounded-full w-10 mr-2" />
-                <p><span className="text-purple-400">@Whoistiana</span> <br/><span className='text-sm font-thin text-gray-400/60'>Created 5 months ago</span></p></span>
-                <p className='flex items-center gap-2'><span className='flex items-center gap-1'> <TbMessageCircleFilled />details</span> <span className='flex items-center gap-1'> <FaStar size={16} className="text-gray/400/30"/> 3 stars</span></p>
-              </div>
+              <Rating />
             <CardContent className="p-4 bg-slate-950 border-teal-200/20 border rounded-lg">
               <h2 className="text-lg text-cyan-400 mb-2"></h2>
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
@@ -66,11 +66,7 @@ const About = () => {
 
             <Card className="">
               <p className="text-gray-400/30 text-lg mb-5">// Operating Systems & Other Programs</p>
-              <div className='flex items-center justify-between gap-2 mb-4 mt-4'>
-                <span className='flex'> <img src="/src/assets/IMG_20210214_130932_054.jpg" alt="Me" className="rounded-full w-10 mr-2" />
-                <p><span className="text-purple-400">@Whoistiana</span> <br/><span className='text-sm font-thin text-gray-400/60'>Created 5 months ago</span></p></span>
-                <p className='flex items-center gap-2'><span className='flex items-center gap-1'> <TbMessageCircleFilled />details</span> <span className='flex items-center gap-1'> <FaStar size={16} className="text-gray/400/30"/> 3 stars</span></p>
-              </div>
+              <Rating />
               <CardContent className="p-4 bg-slate-950 border-teal-200/20 border rounded-lg">
                 
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
@@ -82,8 +78,10 @@ const About = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </div>
+            </div>
+            </main>
+            </div>
+
       <Footer/>
       </section>
       </>

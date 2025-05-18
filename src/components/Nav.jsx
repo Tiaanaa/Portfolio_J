@@ -32,7 +32,7 @@ const Nav = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-full bg-slate-900 text-white p-4">
+        <div className="absolute top-0 left-0 bg-slate-900 text-white p-4">
           <Link to="/" className="block py-2">_hello</Link>
           <Link to="/about" className="block py-2">_about-me</Link>
           <Link to="/projects" className="block py-2">_projects</Link>
