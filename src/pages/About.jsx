@@ -8,6 +8,11 @@ import Sidebar from "../components/Sidebar";
 import Rating from "../components/Rating";
 
 import { FiGithub, FiLinkedin, FiMail, FiPhone, FiCheck } from "react-icons/fi";
+import { FaHtml5, FaReact, FaCss3Alt, FaGitAlt, FaPhp, FaLaravel, FaNodeJs} from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { DiDart } from "react-icons/di";
+import { TbSql } from "react-icons/tb";
+import { SiTypescript, SiFlutter } from "react-icons/si";
 const About = () => {
   return (
     <>
@@ -21,95 +26,47 @@ const About = () => {
           {/*Middle panel*/}
           <main className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-gray-400/60 flex-grow container mx-auto items-center text-sm w-full h-full ">
             <div className=" border-teal-200/20 border border-t-0 border-b-0 h-full p-3">
-              <h1>
-                <span className="  pr-7">1</span>/** <br />
-                <span className="  pr-7">2</span> * About Omonola Christiana */
-              </h1>
-              <p className="text-teal-800">
-                <span className="  pr-7 text-gray-400/60 ">3</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>{" "}
-                Welcome to my portfolio.
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">4</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">5</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>{" "}
-                <span className="text-red-300/70 "> [Diploma]</span>{" "}
-                Professional Diploma in Education”.
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">6</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-                <span className="text-red-300/70 ">
-                  {" "}
+              <ol className="list-none [counter-reset:custom] text-gray-400/60 text-sm">
+                <li  className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 ">/**</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* About Omonola Christiana */</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 after:text-teal-800" >* Welcome to my portfolio.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Diploma]</span>{" "}
+                Professional Diploma in Education”.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 ">
                   [Bachelor's degree]
                 </span>{" "}
-                Computer Engineering
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">7</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-                <span className="text-red-300/70 "> [Programming]</span>Since
-                June 2024, I have been a student in the <br />{" "}
-                <span className="  pr-7 text-gray-400/60 ">8</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>{" "}
-                Frontend Stack course.
-              </p>
-              <p>
-                {" "}
-                <span className="  pr-7 text-gray-400/60 ">9</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">* </span>
-                The languages I have learned include: HTML, CSS, JAVASCRIPT,{" "}
-                <br />
-                <span className="  pr-7 text-gray-400/60 ">10</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>{" "}
-                REACT (jsx) with basic knowledge of Tailwindcss and Vite.js.
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">10</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-                <span className="text-purple-400">[Whoistiana]</span> I am a
+                Computer Engineering</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Programming]</span> Since
+                June 2024, I have been a student in the </li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >{" "} Frontend Stack course.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* The languages I have learned include:</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* JavaScript, Dart, TypeScript, PHP and SQL</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Frameworks]</span> ReactJS, Laravel, Node.JS, Flutter</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Frontend]</span> HTML, CSS, Tailwind, Bootstrap, Chakra UI</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Backend]</span> RESTful APIs, SOAP.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*<span className="text-red-300/70 "> [Architecture]</span> Microservice, Event-Driven, Monolithic, Multitenant.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*<span className="text-red-300/70 "> [Cloud & Tools]</span> AWS, Git, Azure DevOps</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-purple-400">[Whoisjohn]</span> I am a
                 very <strong>curious</strong> person, I{" "}
-                <strong>enjoy working in a team</strong>, <br />
-                <span className="  pr-7 text-gray-400/60 ">11</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>and
-                when faced with a challenge, I always try to find the{" "}
-                <strong>most optimal solution</strong>.
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">12</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-                Once I complete the course, I would like to deepen my knowledge{" "}
-                <br /> <span className="  pr-7 text-gray-400/60 ">13</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span> of
-                the stack I have studied, especially <strong>React</strong>,{" "}
-                <br /> <span className="  pr-7 text-gray-400/60 ">14</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>{" "}
-                considering its growing use in web development.
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">15</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">16</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">17</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">18</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*</span>
-              </p>
-              <p>
-                <span className="  pr-7 text-gray-400/60 ">19</span>{" "}
-                <span className="text-sm font-thin text-gray-400/60">*/</span>
-              </p>
+                <strong>enjoy working in a team</strong>,
+                </li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* and when faced with a challenge, </li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* I always try to find the{" "}
+                <strong>most optimal solution</strong>.</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* I would like to deepen my knowledge{" "}</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* of
+                the stack I have studied</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
+               
+          </ol>
+             
               <div className="mt-6">
                 <h2 className="text-lg text-cyan-400 mb-2">Contacts</h2>
                 <p className="flex items-center gap-2">
@@ -144,16 +101,10 @@ const About = () => {
                   <h2 className="text-lg text-cyan-400 mb-2"></h2>
                   <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                     {[
-                      "HTML",
-                      "CSS",
-                      "Javascript",
-                      "React",
-                      "Tailwindcss",
-                      "Git",
-                      "Bootstrap",
+                      { skill: "HTML", icon: <FaHtml5 /> },{ skill: "CSS", icon: <FaCss3Alt /> },{ skill: "Javascript", icon: <IoLogoJavascript /> },{ skill: "React", icon: <FaReact /> },{ skill: "Git", icon: <FaGitAlt />}, {skill:"Dart", icon:<DiDart />},{ skill: "PHP", icon: <FaPhp /> },{ skill: "SQL", icon: <TbSql /> },{ skill: "TypeScript", icon: <SiTypescript /> },{ skill: "Flutter", icon: <SiFlutter /> },{ skill: "Laravel", icon: <FaLaravel /> },{ skill: "Node.js", icon: <FaNodeJs /> },
                     ].map((skill) => (
-                      <div key={skill} className="flex items-center gap-2">
-                        <FiCheck size={16} className="text-green-400" /> {skill}
+                      <div key={skill.skill} className="flex items-center gap-2">{skill.icon}
+                        {skill.skill}
                       </div>
                     ))}
                   </div>

@@ -8,6 +8,7 @@ import HighSchool from "../pages/HighSchool";
 const Sidebar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isProjectsOpen, setProjectsOpen] = useState(false);
+  const [isInterestsOpen, setInterestsOpen] = useState(false);
 
   return (
     <>
@@ -26,19 +27,40 @@ const Sidebar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center h-16 px-6 font-bold text-xl border-b">
-          MyApp
-        </div>
+
 
         <nav className="px-4 py-6 space-y-2">
-          <a
-            href="#"
-            className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100"
-          >
-            <span className="material-icons-outlined text-xl">dashboard</span>
-            Dashboard
-          </a>
-
+          <Link to="/About" className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100">
+            <span className="material-icons-outlined text-xl">Bio</span></Link>
+          
+          {/*Intrest dropdown*/}
+          <button
+            type="button"
+            onClick={() => setInterestsOpen(!isInterestsOpen)}
+            className="flex items-center justify-between w-full px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100"
+          ><span className="flex items-center gap-3">
+          <span className="material-icons-outlined text-xl"><FaFolder/></span>
+          Interests
+        </span><FiChevronDown
+              className={`w-4 h-4 transition-transform ${
+                isProjectsOpen ? "rotate-180" : ""
+              }`}
+            /></button>
+          {isInterestsOpen && (
+            <div className="pl-9 pr-3 space-y-1">
+              {[
+                {icon: <FaImage />,  label: "Frontend", href: "#" },
+                { label: "Backend", href: "#" },
+                { label: "Architecture", href: "#" },
+              ].map((link) => (
+                
+               
+                <Link to={link.href} className=" px-3 py-1.5 rounded text-gray-600 hover:bg-gray-100 flex items-center gap-3">
+                  {link.icon}{link.label}
+                </Link>
+              ))}
+            </div>
+          )}
           {/* Projects dropdown */}
           <button
             type="button"
@@ -60,8 +82,7 @@ const Sidebar = () => {
             <div className="pl-9 pr-3 space-y-1">
               {[
                 {icon: <FaImage />,  label: "High School", href: "/HighSchool" },
-                { label: "New project", href: "#" },
-                { label: "Archived", href: "#" },
+                { label: "Tertiary", href: "#" },
               ].map((link) => (
                 
                
@@ -72,13 +93,6 @@ const Sidebar = () => {
             </div>
           )}
 
-          <a
-            href="#"
-            className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100"
-          >
-            <span className="material-icons-outlined text-xl">settings</span>
-            Settings
-          </a>
         </nav>
       </aside>
 
