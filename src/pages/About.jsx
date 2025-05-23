@@ -16,7 +16,7 @@ import { SiTypescript, SiFlutter } from "react-icons/si";
 const About = () => {
   return (
     <>
-      <section className="bg-slate-900 bg-cover w-full min-h-screen ">
+      <section className="bg-slate-900 bg-cover w-full min-h-screen text-gray-400/60 ">
         <Nav />
         <div className="h-19 border-b-1 border-b-teal-200/10 flex flex-col md:flex"></div>
         <div className="min-h-screen md:flex">
@@ -24,9 +24,9 @@ const About = () => {
           {/* Left panel */}
 
           {/*Middle panel*/}
-          <main className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-gray-400/60 flex-grow container mx-auto items-center text-sm w-full h-full ">
-            <div className=" border-teal-200/20 border border-t-0 border-b-0 h-full p-3">
-              <ol className="list-none [counter-reset:custom] text-gray-400/60 text-sm">
+          <main className="grid grid-cols-1 lg:grid-cols-2 gap-10 flex-grow container mx-auto items-center text-sm w-full min-h-screen ">
+            <div className=" border-teal-200/20 border border-t-0 border-b-0 min-h-screen p-3">
+              <ol className="list-none [counter-reset:custom] ">
                 <li  className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 ">/**</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* About Omonola Christiana */</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 after:text-teal-800" >* Welcome to my portfolio.</li>
@@ -91,9 +91,9 @@ const About = () => {
             </div>
 
             {/* Right panel */}
-            <div className="border-teal-200/20 border border-t-0 border-b-0  h-full p-6 ">
+            <div className="border-teal-200/20 border border-t-0 border-b-0  min-h-screen p-6 ">
               <Card className="">
-                <p className="text-gray-400/30 text-lg mb-5">
+                <p className="text-lg mb-5">
                   // Programming Languages I have learned or am learning
                 </p>
                 <Rating />
@@ -103,7 +103,7 @@ const About = () => {
                     {[
                       { skill: "HTML", icon: <FaHtml5 /> },{ skill: "CSS", icon: <FaCss3Alt /> },{ skill: "Javascript", icon: <IoLogoJavascript /> },{ skill: "React", icon: <FaReact /> },{ skill: "Git", icon: <FaGitAlt />}, {skill:"Dart", icon:<DiDart />},{ skill: "PHP", icon: <FaPhp /> },{ skill: "SQL", icon: <TbSql /> },{ skill: "TypeScript", icon: <SiTypescript /> },{ skill: "Flutter", icon: <SiFlutter /> },{ skill: "Laravel", icon: <FaLaravel /> },{ skill: "Node.js", icon: <FaNodeJs /> },
                     ].map((skill) => (
-                      <div key={skill.skill} className="flex items-center gap-2">{skill.icon}
+                      <div key={skill.skill} className="flex items-center gap-2"><span className='text-green-600'>{skill.icon }</span>
                         {skill.skill}
                       </div>
                     ))}
@@ -112,7 +112,7 @@ const About = () => {
               </Card>
 
               <Card className="">
-                <p className="text-gray-400/30 text-lg mb-5">
+                <p className="text-lg mb-5">
                   // Operating Systems & Other Programs
                 </p>
                 <Rating />
