@@ -4,6 +4,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import HighSchool from './pages/HighSchool';
+import FullStack from './pages/FullStack';
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes } from 'react-router'
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path='/Projects' element={<Projects />} />
           <Route path='/HighSchool' element={<HighSchool />} />
+          <Route path='/FullStack' element={<FullStack />} />
         </Routes>
       </Router>
     </>

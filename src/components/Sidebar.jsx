@@ -49,9 +49,8 @@ const Sidebar = () => {
           {isInterestsOpen && (
             <div className="pl-9 pr-3 space-y-1">
               {[
-                {icon: <FaImage />,  label: "Frontend", href: "#" },
-                { label: "Backend", href: "#" },
-                { label: "Architecture", href: "#" },
+                {icon: <FaImage />,  label: "Soft Engineering", href: "/FullStack" },
+                
               ].map((link) => (
                 
                
