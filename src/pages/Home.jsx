@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { Link } from "react-router";
@@ -10,12 +10,13 @@ const Home = () => {
     <>
       <section className="bg-[url(./assets/photo_2025-05-15_15-53-05.jpg)] bg-cover w-full min-h-screen flex flex-col">
         <Nav />
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-8 lg:p-12 container mx-auto mt-20 md:mt-0 items-center"><AnimatePresence>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-8 lg:p-12 container mx-auto mt-20 md:mt-0 items-center min-h-screen">
+          <AnimatePresence>
           <motion.div key="typing-box"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 400, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             exit={{ x: 100, opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}>
+            transition={{ duration: 4, ease: "easeInOut" }}>
             <div className="space-y-4 md:space-y-6" id="motionText">
               <code className="text-gray-400/60 text-sm md:text-base">Hi all, I am</code>
               <h1 className="text-gray-100/70 text-3xl md:text-4xl"><code>Omonola Christiana</code> </h1>
@@ -68,13 +69,16 @@ const Home = () => {
             </div>
           </motion.div></AnimatePresence>
           
-          <div className="flex items-center justify-center order-first md:order-last">
+          <AnimatePresence><motion.div initial={{ y: -400, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ duration: 4, ease: "easeInOut" }} className="flex items-center justify-center order-first md:order-last">
             <img
               src="/src/assets/IMG_20210214_130932_054.jpg"
               alt="Me"
               className="rounded-full w-48 md:w-72 lg:w-90 animate-pulse"
             />
-          </div>
+            </motion.div></AnimatePresence>
         </div>
         <Footer />
       </section>

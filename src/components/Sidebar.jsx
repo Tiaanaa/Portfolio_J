@@ -14,7 +14,7 @@ const Sidebar = () => {
     <>
       {/* Mobile toggle */}
       <button
-        className="md:hidden p-2 fixed top-9  left-4 rounded shadow "
+        className= "md:hidden p-2 fixed top-9  left-4 "
         onClick={() => setSidebarOpen(!isSidebarOpen)}
         aria-label="Toggle sidebar"
       >
@@ -25,12 +25,13 @@ const Sidebar = () => {
       <aside
         className={` left-0 w-64 transform shadow-md transition-transform duration-200 md:translate-x-0 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+          
+        } ${isSidebarOpen ? "h-48" : "h-0"} `}
       >
 
 
-        <nav className="px-4 py-6 space-y-2">
-          <Link to="/About" className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100">
+        <nav className="px-4 py-0  space-y-2 h-0 flex flex-col">
+          <Link to="/About" className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700">
             <span className="material-icons-outlined text-xl">Bio</span></Link>
           
           {/*Intrest dropdown*/}

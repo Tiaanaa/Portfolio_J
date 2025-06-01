@@ -13,6 +13,8 @@ import { IoLogoJavascript } from "react-icons/io";
 import { DiDart } from "react-icons/di";
 import { TbSql } from "react-icons/tb";
 import { SiTypescript, SiFlutter } from "react-icons/si";
+
+import { AnimatePresence, motion } from "framer-motion";
 const About = () => {
   return (
     <>
@@ -20,11 +22,17 @@ const About = () => {
         <Nav />
         <div className="h-19 border-b-1 border-b-teal-200/10 flex flex-col md:flex"></div>
         <div className="min-h-screen md:flex">
-          <Sidebar />
+          <Sidebar  />
           {/* Left panel */}
 
           {/*Middle panel*/}
-          <main className="grid grid-cols-1 lg:grid-cols-2 gap-10 flex-grow container mx-auto items-center text-sm w-full min-h-screen ">
+          
+          <main className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 flex-grow container mx-auto items-center text-sm w-full min-h-screen ">
+            <AnimatePresence>
+            <motion.div initial={{ y: 400, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ duration: 4, ease: "easeInOut" }}>
             <div className=" border-teal-200/20 border border-t-0 border-b-0 min-h-screen p-3">
               <ol className="list-none [counter-reset:custom] ">
                 <li  className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 ">/**</li>
@@ -88,9 +96,11 @@ const About = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+                </div>
+                </motion.div></AnimatePresence>
 
             {/* Right panel */}
+            
             <div className="border-teal-200/20 border border-t-0 border-b-0  min-h-screen p-6 ">
               <Card className="">
                 <p className="text-lg mb-5">
@@ -128,7 +138,7 @@ const About = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+              </div>
           </main>
         </div>
 
