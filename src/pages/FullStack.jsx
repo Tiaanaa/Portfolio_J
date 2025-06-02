@@ -21,7 +21,7 @@ const FullStack = () => {
           exit={{ x: 100, opacity: 0 }}
           transition={{ duration: 4, ease: "easeInOut" }}>
         <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">/**</li>
-        <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">* My Interests in Software Engineering</li>
+        <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">* <strong>My Interests in Software Engineering</strong></li>
         <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">* Experienced Software Engineer with </li>
         <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">* over 5 years of expertise in designing</li>
         <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7">* and delivering innovative,</li>

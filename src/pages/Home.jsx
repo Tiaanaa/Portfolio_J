@@ -17,7 +17,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ x: 100, opacity: 0 }}
             transition={{ duration: 4, ease: "easeInOut" }}>
-            <div className="space-y-4 md:space-y-6" id="motionText">
+            <div className="space-y-4 md:space-y-6 " id="motionText">
               <code className="text-gray-400/60 text-sm md:text-base">Hi all, I am</code>
               <h1 className="text-gray-100/70 text-3xl md:text-4xl"><code>Omonola Christiana</code> </h1>
               <p className="text-blue-900 text-xl md:text-2xl">&gt; Front-end developer</p>

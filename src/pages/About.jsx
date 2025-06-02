@@ -34,9 +34,9 @@ const About = () => {
             exit={{ x: 100, opacity: 0 }}
             transition={{ duration: 4, ease: "easeInOut" }}>
             <div className=" border-teal-200/20 border border-t-0 border-b-0 min-h-screen p-3">
-              <ol className="list-none [counter-reset:custom] ">
+              <ol className="list-none [counter-reset:custom] font-mono  ">
                 <li  className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 ">/**</li>
-                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* About Omonola Christiana */</li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* About John Oyekola */</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7 after:text-teal-800" >* Welcome to my portfolio.</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Diploma]</span>{" "}
@@ -46,8 +46,8 @@ const About = () => {
                 </span>{" "}
                 Computer Engineering</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Programming]</span> Since
-                June 2024, I have been a student in the </li>
-                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >{" "} Frontend Stack course.</li>
+                 I have been a fullstack  </li>
+                <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >*{" "} developer for the past 5 years.</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* The languages I have learned include:</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* JavaScript, Dart, TypeScript, PHP and SQL</li>
                 <li className="[counter-increment:custom] before:content-[counter(custom)] before:mr-7" >* <span className="text-red-300/70 "> [Frameworks]</span> ReactJS, Laravel, Node.JS, Flutter</li>
